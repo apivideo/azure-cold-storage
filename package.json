@@ -1,0 +1,19 @@
+{
+  "name": "apivideo-azure-cold-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backup.ts",
+  "scripts": {
+    "build": "npm run build:tsc",
+    "backup": "node ./dist/backup.js",
+    "build:tsc": "tsc -p ./tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@api.video/nodejs-client": "^2.5.4",
+    "@azure/storage-blob": "^12.16.0",
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1"
+  }
+}
