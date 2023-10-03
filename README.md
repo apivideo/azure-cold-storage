@@ -8,17 +8,6 @@
 video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in
 your app.
 
-# Table of contents
-
-- [Table of contents](#table-of-contents)
-- [Project description](#project-description)
-- [Getting started](#getting-started)
-    - [Installation](#installation)
-    - [Code sample](#code-sample)
-- [Documentation](#documentation)
-- [Dependencies](#dependencies)
-- [FAQ](#faq)
-
 # Project description
 
 api.video provides you with a convenient way of sending your transcoded videos to your preferred file storage solution. With the current script you'll be able to backup your transcoded videos on Azure Storage account.
@@ -37,13 +26,9 @@ api.video provides you with a convenient way of sending your transcoded videos t
 ### Getting the Azure Storage Account name
 
 - Navigate to your Azure portal
-- Click on Storage Account
-    
-    ![Screenshot 2023-10-03 at 18.59.16.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f2d8051e-4e31-4fdb-b56c-9b28ab15a792/364a6774-e156-432f-a1ce-4ffcf0e4c6a8/Screenshot_2023-10-03_at_18.59.16.png)
-    
+- Click on Storage Account  
 - You’ll find the Storage Account in the list
-    
-    ![Screenshot 2023-10-03 at 18.59.30.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f2d8051e-4e31-4fdb-b56c-9b28ab15a792/9b33301d-ea9a-4d64-a523-8e22f4fab561/Screenshot_2023-10-03_at_18.59.30.png)
+  
     
 
 ## Getting Started
