@@ -81,5 +81,4 @@ After the script was built, it’s time to run it:
 
 # FAQ
 
-If you have any questions, ask us in the [community](https://community.api.video) or
-use [issues](:memo: **TODO** URL to this github project issues).
+If you have any questions, ask us in the [community](https://community.api.video)
