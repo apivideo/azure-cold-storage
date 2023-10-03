@@ -35,20 +35,6 @@ api.video provides you with a convenient way of sending your transcoded videos t
 
 After you’ve got all the keys and installed node.js, npm and typescript, you can proceed with cloning the script from GitHub.
 
-### Cloning the Cold Storage script
-
-1. In the command line enter the following
-
-```bash
-$ git clone https://github.com/apivideo/{place-holder}.git
-```
-
-1. Once the script is cloned, you can navigate the script directory
-
-```bash
-$ cd {place-holder}
-```
-
 ### Setting up the script
 
 Once you are in the script directory, install the dependancies
