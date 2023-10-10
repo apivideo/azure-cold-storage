@@ -1,17 +1,36 @@
-import { Utils } from './utils/utils'
+import { AzureUtils } from './utils/azure-utils'
+import { AmazonUtils } from './utils/aws-utils'
+import { GoogleStorageUtils } from './utils/google-utils'
+import * as dotenv from "dotenv";
+dotenv.config();
+
+const spaceName = process.env.SPACE_NAME ? process.env.SPACE_NAME : "";
+
+const checkProvider = (): any => {
+    const provider = process.env.PROVIDER;
+    switch(provider) {
+        case 'azure':
+            return new AzureUtils;
+        case 'aws':
+          return new AmazonUtils;
+        case 'google':
+            return new GoogleStorageUtils;
+        default:
+          console.log(`Invalid provider: ${provider}`)
+      }
+}
 
 const backup = async () => {
-const utils = new Utils;
+const utils = checkProvider();
 const videoList = await utils.getVideoUrls();
-const containerName = `videos`
-const container = await utils.getAzureContainer(containerName);
+const space = await utils.setSpaceName(spaceName);
 for ( const i in videoList) {
     if (videoList && videoList[i] && videoList[i].url) {
         const videoReadStream = await utils.getVideoStreamFromUri(videoList[i].url)
-        const blobName = `${videoList[i].title}-${videoList[i].videoId}.mp4`
-        await utils.uploadStreamToBlob(container, videoReadStream, blobName);
+        const videoName = `${videoList[i].title}-${videoList[i].videoId}.mp4`
+        await utils.uploadStream(space, videoReadStream, videoName);
         } 
     }
 }
-  
+
 backup();
